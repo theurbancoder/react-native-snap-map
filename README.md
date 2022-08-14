@@ -1,5 +1,7 @@
 # react-native-snap-map
-Light weight map library
+
+Snap Map is a light weight map library for react native. The module supports the new and old architecture.
+
 ## Installation
 
 ```sh
@@ -9,12 +11,35 @@ npm install react-native-snap-map
 ## Usage
 
 ```js
-import { multiply } from "react-native-snap-map";
+import * as React from 'react';
 
-// ...
+import { StyleSheet, View } from 'react-native';
+import { SnapMap } from 'react-native-snap-map';
 
-const result = await multiply(3, 7);
+const App = () => (
+  <View style={styles.container}>
+    <SnapMap style={styles.map} />
+  </View>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  map: {
+    width: 300,
+    height: 300,
+  },
+});
 ```
+
+## Todo
+
+- Android support (old / new arch)
+- Expo config plugin
+- Benchmarks
 
 ## Contributing
 

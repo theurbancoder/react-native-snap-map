@@ -16,6 +16,8 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{h,m,mm}"
 
+  s.frameworks = "MapKit"
+
   s.dependency "React-Core"
 
   # Don't install the dependencies when we run `pod install` in the old architecture.
@@ -26,6 +28,7 @@ Pod::Spec.new do |s|
         "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
     }
 
+    s.dependency "React-RCTFabric"
     s.dependency "React-Codegen"
     s.dependency "RCT-Folly"
     s.dependency "RCTRequired"
